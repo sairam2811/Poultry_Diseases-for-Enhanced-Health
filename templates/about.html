@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | PoultryDetect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #aaa;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    nav .social-icons i {
+      margin-left: 15px;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1abc9c;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .highlights {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .highlight-box {
+      background-color: #111;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid #1abc9c;
+      border-radius: 8px;
+    }
+
+    .highlight-box h3 {
+      margin: 0 0 10px;
+      color: #1abc9c;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">PoultryDetect</div>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/about" class="active">ABOUT</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+      <li><a href="/predict">PREDICT</a></li>
+    </ul>
+    <div class="social-icons">
+      <i class="fab fa-x-twitter"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+  </nav>
+
+  <div class="about-section">
+    <h1>About Us</h1>
+    <p>
+      PoultryDetect is an AI-powered platform built to help poultry farmers identify and manage common poultry diseases with speed and accuracy. 
+      Using advanced image recognition technology and deep learning models like ResNet and VGG, we provide real-time disease detection based on visual symptoms.
+    </p>
+    <p>
+      Our goal is to promote healthier poultry farming by enabling early intervention, reducing losses, and improving overall flock health.
+      Whether you are a small-scale farmer or a commercial poultry operator, PoultryDetect helps you make data-driven decisions with ease.
+    </p>
+
+    <div class="highlights">
+      <div class="highlight-box">
+        <h3>🐣 AI-Powered Diagnosis</h3>
+        <p>Instant image-based classification of diseases like Coccidiosis, Newcastle, and Salmonella.</p>
+      </div>
+      <div class="highlight-box">
+        <h3>📊 Health Tracking</h3>
+        <p>Track disease history and receive personalized recommendations for better poultry care.</p>
+      </div>
+      <div class="highlight-box">
+        <h3>🌍 Empowering Farmers</h3>
+        <p>Bridging the gap between modern technology and rural poultry farmers for a healthier future.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

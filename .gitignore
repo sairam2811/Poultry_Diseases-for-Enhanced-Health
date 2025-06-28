@@ -1,0 +1,28 @@
+# === Python-related ===
+__pycache__/
+*.py[cod]
+*.log
+
+# === Jupyter Notebook Checkpoints ===
+.ipynb_checkpoints/
+
+# === Virtual Environment ===
+.venv/
+
+# === Model Files ===
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+
+# === VSCode or PyCharm IDE ===
+.vscode/
+.idea/
+
+# === OS-specific files ===
+.DS_Store
+Thumbs.db
+
+# === Other (optional) ===
+.env  # If you use environment variable files
+*.bak # Backup files

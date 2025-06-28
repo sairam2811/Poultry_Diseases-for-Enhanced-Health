@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prediction Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #aaa;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #1abc9c;
+      font-weight: bold;
+    }
+
+    .social-icons i {
+      color: #fff;
+      margin-left: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .social-icons i:hover {
+      color: #1abc9c;
+    }
+
+    .upload-section {
+      margin-top: 60px;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+      color: #1abc9c;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin: 10px 0 30px;
+      color: #eee;
+    }
+
+    label {
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    input[type="file"] {
+      margin-top: 20px;
+      background-color: #111;
+      color: #ccc;
+      border: 1px solid #555;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 50%;
+    }
+
+    input[type="file"]::-webkit-file-upload-button {
+      background-color: #1abc9c;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 14px 35px;
+      background-color: #1abc9c;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #159a80;
+    }
+
+    .prediction {
+      margin-top: 40px;
+      font-size: 26px;
+      color: #1abc9c;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      input[type="file"] {
+        width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><i class="fas fa-camera" style="margin-right: 8px;"></i>Poultry Detect</div>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="#" class="active">PREDICTION_PAGE</a></li>
+    </ul>
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+  </nav>
+
+  <div class="upload-section">
+    <h1>Prediction</h1>
+    <h2>Image Classification</h2>
+    <form method="POST" enctype="multipart/form-data">
+      <label for="pc_image">Upload Your Image :</label><br>
+      <input type="file" name="pc_image" accept=".jpg, .jpeg, .png" required><br>
+      <button class="btn" type="submit">predict</button>
+    </form>
+
+    {% if predict %}
+      <div class="prediction">
+        <p>Hence, the infection type detected as <strong>{{ predict }}</strong></p>
+      </div>
+    {% endif %}
+  </div>
+
+</body>
+</html>

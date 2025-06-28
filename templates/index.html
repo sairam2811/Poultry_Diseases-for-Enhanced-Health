@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PoultryDetect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #aaa;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    nav .social-icons i {
+      margin-left: 15px;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 10px 25px;
+      background-color: #1abc9c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .image-gallery img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .scroll-up {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1abc9c;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    @media(max-width: 768px) {
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">PoultryDetect</div>
+    <ul>
+      <li><a href="#" class="active">HOME</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+      <li><a href="/predict">PREDICT</a></li>
+    </ul>
+    <div class="social-icons">
+      <i class="fab fa-x-twitter"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+  </nav>
+
+  
+
+
+  <header>
+    <h1>Welcome to Poultry Health Hub,</h1>
+    <p>Your comprehensive resource for <br> poultry disease management and prevention.</p>
+    <a href="/predict" class="btn">GET STARTED</a>
+  </header>
+
+  <div class="image-gallery">
+    <img src="../static/coccidiosis.jpg" alt="Coccidiosis">
+    <img src="../static/sick_chicken.jpg" alt="Sick Chicken">
+    <img src="../static/poultry2.jpg" alt="Poultry 2">
+    <img src="../static/healthy_poultry.jpg" alt="Healthy Poultry">
+
+  </div>
+
+  <button class="scroll-up" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
